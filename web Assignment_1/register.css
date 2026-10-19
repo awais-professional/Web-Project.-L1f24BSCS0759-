@@ -1,0 +1,300 @@
+:root {
+    --bg: #0a1128;
+    --card: #111c3a;
+    --field: #0b1430;
+    --border: #24365f;
+    --accent: #3b82f6;
+    --cream: #eaf0ff;
+    --muted: #93a3c7;
+    --ok: #3ddc84;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--cream);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+h2, legend, .logo {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+::selection {
+    background-color: var(--red);
+    color: var(--cream);
+}
+
+/* ---------- Header / Navbar (same as other pages) ---------- */
+.header-section {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(20, 13, 13, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.slash {
+    color: var(--red);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+    color: var(--cream);
+}
+
+.nav-cta {
+    background-color: var(--red);
+    color: var(--cream);
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 18px rgba(230, 57, 80, 0.35);
+}
+
+/* ---------- Form card ---------- */
+.form-container {
+    max-width: 680px;
+    margin: 40px auto;
+    padding: 36px;
+    background: radial-gradient(circle at 50% 0%, rgba(230, 57, 80, 0.18), transparent 60%), var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.form-container h2 {                         /* descendant combinator */
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.form-container h2::before {
+    content: "//";
+    color: var(--red);
+    margin-right: 10px;
+}
+
+.form-sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.form-sub strong {
+    color: var(--cream);
+}
+
+/* ---------- Flexbox form layout ---------- */
+.styled-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 16px;
+}
+
+.styled-form > .input-group,                 /* child combinator */
+.styled-form > .form-row,
+.styled-form > .submit-btn {
+    flex: 1 1 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.form-row > .input-group {
+    flex: 1;
+}
+
+/* ---------- Labels ---------- */
+.input-group > label,
+legend {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: var(--muted);
+}
+
+/* required star (:has needs a modern browser) */
+.input-group:not(.checkbox-box):has(:required) > label::after {
+    content: " *";
+    color: var(--red);
+    font-weight: bold;
+}
+
+/* ---------- Fields ---------- */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    background: var(--field);
+    color: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #5a4040;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid rgba(230, 57, 80, 0.45);
+    outline-offset: 1px;
+    border-color: var(--red);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+::placeholder {
+    color: #6f6262;
+    font-style: italic;
+}
+
+/* validation: only after the user has typed something */
+:is(input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="number"]):not([readonly]):not(:disabled):not(:placeholder-shown):valid {
+    box-shadow: inset 3px 0 0 var(--ok);
+}
+
+:is(input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="number"]):not([readonly]):not(:disabled):not(:placeholder-shown):invalid {
+    box-shadow: inset 3px 0 0 var(--red);
+    border-color: var(--red);
+}
+
+/* attribute selectors for special inputs */
+input[readonly] {
+    color: var(--muted);
+    border-style: dashed;
+    cursor: default;
+}
+
+input:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+input[type="color"] {
+    height: 44px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    padding: 0;
+    border: none;
+    background: transparent;
+    accent-color: var(--red);
+    cursor: pointer;
+}
+
+input[type="file"] {
+    padding: 8px;
+    color: var(--muted);
+}
+
+input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--red);
+    color: var(--cream);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #ff4d63;
+}
+
+.form-row ~ .input-group select {            /* general sibling combinator */
+    cursor: pointer;
+}
+
+label + input[type="date"],                  /* adjacent sibling combinator */
+label + input[type="time"] {
+    color-scheme: dark;
+}
+
+/* ---------- Radio and checkbox ---------- */
+fieldset.radio-box {
+    border: none;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
+}
+
+.checkbox-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.radio-box label,
+.checkbox-box label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 14px;
+    color: var(--cream);
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    padding: 0;

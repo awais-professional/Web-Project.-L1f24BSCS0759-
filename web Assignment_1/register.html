@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULSEFIT - Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <header class="header-section">
+        <nav class="navbar">
+            <div class="logo"><span class="slash">//</span> PULSEFIT</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="media.html">Media &amp; Info</a></li>
+                <li><a href="register.html" class="active-link">Register</a></li>
+            </ul>
+            <a href="register.html" class="nav-cta">Get early access</a>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <h2>Join PULSEFIT Waitlist</h2>
+        <p class="form-sub">Fill out the details below to reserve your <strong>free</strong> personal training trial.</p>
+
+        <form class="styled-form" action="#" method="post">
+            <div class="input-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="30" placeholder="Enter your name">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password (min 8 characters):</label>
+                <input type="password" id="password" name="password" required minlength="8" placeholder="********">
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div class="input-group">
+                    <label for="age">Age (15-60):</label>
+                    <input type="number" id="age" name="age" min="15" max="60" value="22">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="workout-time">Preferred Workout Time:</label>
+                    <input type="time" id="workout-time" name="workout_time">
+                </div>
+                <div class="input-group">
+                    <label for="theme-color">Theme Color Choice:</label>
+                    <input type="color" id="theme-color" name="theme_color" value="#e63950">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="plan">Selected Plan:</label>
+                    <input type="text" id="plan" name="plan" value="Free Trial (30 min)" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="coach">Assigned Coach:</label>
+                    <input type="text" id="coach" name="coach" value="Assigned after approval" disabled>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="website">Portfolio / Social Website Link:</label>
+                <input type="url" id="website" name="website" placeholder="https://">
+            </div>
+
+            <div class="input-group">
+                <label for="intensity">Fitness Intensity Level (1 to 10):</label>
+                <input type="range" id="intensity" name="intensity" min="1" max="10" value="5">
+            </div>
+
+            <div class="input-group">
+                <label for="goal">Primary Goal:</label>
+                <select id="goal" name="goal">
+                    <option value="weight_loss" selected>Weight Loss &amp; Fat Burn</option>
+                    <option value="muscle_gain">Muscle Building</option>
+                    <option value="yoga">Yoga &amp; Flexibility</option>
+                    <option value="women_only">Private Women-Only Sessions</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="report">Upload Medical Report / File:</label>
+                <input type="file" id="report" name="report" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+
+            <div class="input-group">
+                <label for="notes">Fitness Background &amp; Routine Notes:</label>
+                <textarea id="notes" name="notes" rows="3" maxlength="300" placeholder="Tell us about your previous workout routine..."></textarea>
+            </div>
+
+            <fieldset class="input-group radio-box">
+                <legend>Gender:</legend>
+                <label><input type="radio" name="gender" value="male" checked> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </fieldset>
+
+            <div class="input-group checkbox-box">
+                <label><input type="checkbox" name="newsletter" checked> Send me fitness tips by email</label>
+                <label><input type="checkbox" name="terms" required> I agree to the terms and conditions</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Request</button>
+        </form>
+    </main>
+
+    <footer class="footer-section">
+        <p>&copy; 2026 PULSEFIT. Online fitness coaching in Pakistan.</p>
+    </footer>
+
+</body>
+</html>

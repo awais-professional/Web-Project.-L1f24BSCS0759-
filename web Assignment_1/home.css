@@ -1,0 +1,221 @@
+:root {
+    --bg: #0a1128;
+    --card: #111c3a;
+    --border: #24365f;
+    --accent: #3b82f6;
+    --cream: #eaf0ff;
+    --muted: #93a3c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--cream);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+h2, h3, .main-title, .logo {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+/* ---------- Header / Navbar ---------- */
+.header-section {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(20, 13, 13, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.slash {
+    color: var(--red);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+    color: var(--cream);
+}
+
+.nav-cta {
+    background-color: var(--red);
+    color: var(--cream);
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 18px rgba(230, 57, 80, 0.35);
+}
+
+/* ---------- Hero ---------- */
+.main-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#hero {
+    background: radial-gradient(circle at 50% 0%, rgba(230, 57, 80, 0.25), transparent 65%), var(--card);
+    padding: 60px 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.eyebrow {
+    color: var(--red);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.main-title {
+    font-size: clamp(32px, 6vw, 68px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--cream);
+}
+
+.hero-desc {
+    color: var(--muted);
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    font-size: 17px;
+}
+
+.hero-desc strong {
+    color: var(--cream);
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--red);
+    color: var(--cream);
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #ff4d63;
+    transform: translateY(-3px);
+}
+
+.hero-img {
+    display: block;
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    margin-top: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+/* ---------- Step cards ---------- */
+#steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.section-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 28px;
+}
+
+.feature-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--red);
+}
+
+.step-num {
+    display: inline-block;
+    background-color: var(--red);
+    color: var(--cream);
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ---------- Footer ---------- */
+.footer-section {
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .nav-cta {
+        display: none;
+    }
+}
