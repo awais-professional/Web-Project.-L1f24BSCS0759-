@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Website</title>
-    <link rel="stylesheet"href="home.css">
+    <title>EchoWave | Music Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="CSS/home.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                EchoWave
+                Echo
+                <span>
+                    Wave  
+                </span>
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -25,18 +30,19 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <p>WELCOME TO ECHOWAVE</p>
-                <h1>FEEL THE MUSIC.<BR>LIVE THE MOMENT</h1>
-                    <P>
+                <p class="hero-tag">WELCOME TO ECHOWAVE</p>
+                <h1>FEEL THE MUSIC.<BR><span class="highlight">LIVE THE MOMENT.</span></h1>
+                    <P class="hero-text">
                     Experience amazing music,concerts and live performances.
 
                     </P>
-                    <a href="portfolio.html">EXPLORE OUR MUSIC</a>
+                    <a href="portfolio.html" class="btn">EXPLORE OUR MUSIC</a>
             </div>
 
         </section>
-        <section class="about">
-            <h2>ABOUT ECHOWAVE</h2>
+        <section class="about" id="about">
+            <h2>ABOUT <span class="highlight">ECHOWAVE</span></h2>
+            <img src="images/hero.jpg" alt="Live Music concert" class="about-image">
             <P>
                 EchoWave is a music platform dedicated to
                 bringing artists and music lovers together.
