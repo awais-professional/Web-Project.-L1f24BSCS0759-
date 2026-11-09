@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0b0b12, #1a0b2e);
+    color: white;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+}
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.logo span {
+    color: #ff4f19e3;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    display: block;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+nav a:hover,
+nav a.active {
+    background-color: #ff4f19e3;
+}
+main {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+h1::before {
+    content: "♪ ";
+    color: #ff4f19e3;
+}
+h1 ~ p {
+    text-align: center;
+    color: #b5b5c3;
+    margin-bottom: 30px;
+}
+.register-form {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+.register-form > .form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #dddddd;
+}
+.required::after {
+    content: " *";
+    color: #ff4f19e3;
+}
+label + input,
+label + select,
+label + textarea {
+    margin-top: 2px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: 2px solid #444444;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #777777;
+}
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #7b2ff7;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color:#ff4f19e3;
+    box-shadow: 0 0 10px rgba(255, 46, 99, 0.6);
+}
+.form-group input:valid {
+    border-color: #2ecc71;
+}
+.form-group input:invalid {
+    border-color:#ff4f19e3;
+}
+input[type="color"] {
+    height: 45px;
+    padding: 3px;
+}
+input[type="range"] {
+    padding: 0;
+    accent-color: #ff4f19e3;
+}
+input[type="file"] {
+    padding: 9px;
+}
+.form-group input[readonly] {
+    border-color: #f1c40f;
+    color: #f1c40f;
+}
+.form-group input[disabled] {
+    border-color: #444444;
+    background-color: #222222;
+    color: #666666;
+    cursor: not-allowed;
+}
+.options label {
+    display: inline;
+    margin-right: 20px;
+}
+.options span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.form-group .options input,
+.options input[type="radio"],
+.options input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+    accent-color: #ff4f19e3;
+}
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+    color: #ff4f19e3;
+    font-weight: 600;
+}
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff4f19e3, #7b2ff7);
+    transition: 0.3s;
+}
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 46, 99, 0.6);
+}
+#footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #000000;
+}
+#footer p {
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+}
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    .register-form {
+        padding: 20px;
+    }
+}
