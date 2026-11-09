@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #0b0b12;
+    color: white;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+header {
+    background: linear-gradient(90deg, #7b2ff7, #ff4f19e3);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+}
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.logo span {
+    color: #ff4f19e3;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+nav a:hover,
+nav a.active {
+    border-bottom: 3px solid white;
+}
+.services-intro {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+.services-intro h1 {
+    font-size: 48px;
+    margin: 0 0 10px;
+}
+.highlight {
+    color: #ff4f19e3;
+}
+.services-intro p {
+    color: #b5b5c3;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 30px 5% 70px;
+}
+.card {
+    width: 300px;
+    background-color: #16161f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+.card:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 15px 40px rgba(255, 46, 99, 0.5);
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+.card:hover img {
+    transform: scale(1.1);
+}
+.card h3 {
+    margin: 20px 20px 10px;
+    color: #ff4f19e3;
+}
+.card p {
+    margin: 0 20px 20px;
+    color: #b5b5c3;
+    line-height: 1.6;
+}
+.card a {
+    display: inline-block;
+    margin: 0 20px 25px;
+    padding: 10px 24px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff4f19e3, #7b2ff7);
+    transition: 0.3s;
+}
+.card a:hover {
+    transform: scale(1.1);
+}
+#footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #000000;
+}
+#footer p {
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+}
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+    .services-intro h1 {
+        font-size: 32px;
+    }
+}
