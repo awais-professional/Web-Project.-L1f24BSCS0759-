@@ -9,48 +9,42 @@ body{
     font-family: 'Montserrat',arial,sans-serif;
 }
 header {
-    position:static;
-    top: 0;
-    z-index: 10;
-    background-color: rgba(11, 11,18,0.9);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: linear-gradient(90deg, #7b2ff7, #ff4f19e3);
 }
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 60px;
+    padding: 18px 50px;
 }
-.logo{
-    font-size:22px;
-    font-weight: 700;
+.logo {
+    font-size: 26px;
+    font-weight: 800;
     letter-spacing: 2px;
 }
-.logo span,
-.highlight{
+.logo span {
     color: #ff4f19e3;
-
 }
-nav ul{
-    list-style:none;
+nav ul {
+    list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
-nav a{
+nav a {
+    display: block;
+    padding: 8px 16px;
     color: white;
-    text-decoration:none;
-    font-size: 14px;
-    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 13px;
     text-transform: uppercase;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
+    border-radius: 20px;
     transition: 0.3s;
 }
-nav a:hover{
-    color: #ff4f19e3;
-    border-bottom: 2px solid #ff4f19e3;
+nav a:hover,
+nav a.active {
+    background-color: #ff4f19e3;
 }
 .hero{
     min-height: 90vh;
@@ -101,7 +95,7 @@ h1{
 }
 .btn:hover{
     transform:translateY(-5px);
-    box-shadow: 0 10px 30px rgba(123,47,247,0,7);
+    box-shadow: 0 10px 30px rgba(123,47,247,0.7);
 }
 #about{
     max-width: 800px;
@@ -150,23 +144,17 @@ footer{
         box-shadow: 0 0 10px rgba(255, 46, 99, 0.4);
     }
 }
-nav a.active{
-    color: #ff4f19e3;
-    border-bottom: 2px solid #ff4f19e3;
-}
-@media (max-width: 900px) {
+
+@media (max-width: 700px) {
     nav {
         flex-direction: column;
         gap: 15px;
-        padding: 15px 20px;
+        padding: 15px;
     }
-
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px 20px;
     }
-
     h1 {
         font-size: 46px;
     }
@@ -175,33 +163,30 @@ nav a.active{
         font-size: 30px;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
     nav ul {
-        gap: 10px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-
-    nav a {
-        font-size: 12px;
-    }
-
     .hero {
         min-height: 80vh;
     }
-
     h1 {
         font-size: 32px;
     }
-
     .hero-text,
     #about p {
         font-size: 16px;
     }
-
     .btn {
         padding: 12px 28px;
         font-size: 14px;
     }
-
     .about-image {
         height: 200px;
     }
