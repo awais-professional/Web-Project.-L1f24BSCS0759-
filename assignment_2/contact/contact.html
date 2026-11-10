@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | EchoWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Echo<span>Wave</span></div>
+
+            <ul>
+                <li><a href="../homepage/index.html">Home</a></li>
+                <li><a href="../media/media.html">Media</a></li>
+                <li><a href="../register/register.html">Register</a></li>
+                <li><a href="../services/services.html">Services</a></li>
+                <li><a href="../portfolio/protfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>GET IN <span class="highlight">TOUCH</span></h1>
+        <div class="contact-wrapper">
+            <section class="about-us">
+                <h2>About Us</h2>
+                <p>
+                    EchoWave is a music platform dedicated to bringing
+                    artists and music lovers together. We create, perform
+                    and share music that you can feel.
+                </p>
+
+                <ul class="contact-details">
+                    <li><strong>Email:</strong> hello@echowave.com</li>
+                    <li><strong>Phone:</strong> +92 300 1234567</li>
+                    <li><strong>Studio:</strong> Model Town, Lahore</li>
+                </ul>
+            </section>
+            <section class="contact-form-box">
+                <h2>Send a Message</h2>
+                <form id="contactForm" novalidate>
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name">
+                        <small id="nameError"></small>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@example.com">
+                        <small id="emailError"></small>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" maxlength="200" placeholder="Write your message"></textarea>
+                        <small id="messageError"></small>
+                        <span id="charCount">0 / 200</span>
+                    </div>
+                    <button type="submit">SEND MESSAGE</button>
+                    <p id="successMessage">Thank you! Your message has been sent.</p>
+
+                </form>
+            </section>
+        </div>
+
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2026 EchoWave. All Rights Reserved.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
